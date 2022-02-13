@@ -47,6 +47,13 @@ class Playlist:
         :param other: The playlist to be added.
         :return: This playlist with the added items.
         """
+        if not isinstance(other, Playlist):
+            raise TypeError(
+                "unsupported operand type(s) for +=: "
+                f"'{self.__class__.__qualname__}' and "
+                f"'{other.__class__.__qualname__}'"
+            )
+
         items: list[str] = list(other.items - self.items)
         logging.info(f"Adding {len(items)} items from {other} to {self}")
 
