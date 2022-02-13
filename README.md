@@ -21,7 +21,7 @@ options:
 
 ## Requirements
 
-- Python 3.7 or newer.
+- Python 3.8 or newer.
 
 - [Spotipy](https://github.com/plamere/spotipy/).
 

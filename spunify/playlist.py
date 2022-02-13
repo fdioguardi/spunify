@@ -28,7 +28,7 @@ class Playlist:
 
     def __repr__(self):
         """Return a readable representation of the playlist."""
-        return f"{self.__class__.__qualname__}(uri={self.uri})"
+        return f"{self.__class__.__qualname__}({self.uri=})"
 
     @property
     def items(self) -> set:
