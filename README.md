@@ -48,7 +48,7 @@ fi
 
 ## Setup
 
-1. Register a new app on yous [Spotify for Developers](https://developer.spotify.com/dashboard/)
+1. Register a new app on your [Spotify for Developers](https://developer.spotify.com/dashboard/)
    account.
 
 2. Replace the Client ID in [`spunify/credentials.py`](spunify/credentials.py)
