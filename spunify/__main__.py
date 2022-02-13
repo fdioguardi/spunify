@@ -30,15 +30,15 @@ def parse_args():
     group.add_argument(
         "-v",
         "--verbose",
-        default=False,
-        action="store_true",
+        action="store_const",
+        const=logging.INFO,
         help="Increase verbosity",
     )
     group.add_argument(
         "-vv",
         "--very-verbose",
-        default=False,
-        action="store_true",
+        action="store_const",
+        const=logging.DEBUG,
         help="Increase verbosity further",
     )
     parser.add_argument(
@@ -65,15 +65,8 @@ def main():
 
     args = parse_args()
 
-    if args.verbose:
-        log_level = logging.INFO
-    elif args.very_verbose:
-        log_level = logging.DEBUG
-    else:
-        log_level = logging.WARNING
-
     logging.basicConfig(
-        level=log_level,
+        level=args.verbose or args.very_verbose or logging.WARNING,
         format=f"%(asctime)s [%(module)s]: %(message)s",
         datefmt="%I:%M:%S %p",
     )
