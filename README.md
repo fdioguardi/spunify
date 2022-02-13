@@ -54,8 +54,8 @@ fi
 2. Replace the Client ID in [`spunify/credentials.py`](spunify/credentials.py)
    with the Client ID of your new app.
 
-3. Match the Redirect URI in your Spotify's app with the Redirect URI in [`spunify/credentials.py`](spunify/credentials.py)
-   (you can use any valid URL).
+3. In the dashboard of your new app, add a Redirect URI to match the one in [`spunify/credentials.py`](spunify/credentials.py)
+   (you can use the link provided or any other valid URL).
 
 4. Run the application as shown in [Usage](#usage) and grant it the [required permissions](#authorization-scopes).
    You will only need to do this once.
