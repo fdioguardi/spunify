@@ -67,14 +67,14 @@ fi
 The first time you run the application, Spotify will ask you to authorize this operations:
 
 - [playlist-modify-private](https://developer.spotify.com/documentation/general/guides/authorization/scopes/#playlist-modify-private/)
+- [playlist-modify-public](https://developer.spotify.com/documentation/general/guides/authorization/scopes/#playlist-modify-public/)
 - [playlist-read-collaborative](https://developer.spotify.com/documentation/general/guides/authorization/scopes/#playlist-read-collaborative/)
 - [playlist-read-private](https://developer.spotify.com/documentation/general/guides/authorization/scopes/#playlist-read-private/)
 
 Spunify needs this permissions to get the tracks/episodes on the playlists
 (`playlist-read-collaborative` and `playlist-read-private`)
 and to update the destination playlist
-(`playlist-modify-private`, which also implies
-[`playlist-modify-public`](https://developer.spotify.com/documentation/general/guides/authorization/scopes/#playlist-modify-public/)).
+(`playlist-modify-private` and `playlist-modify-public`).
 
 To change the scopes, edit [`spunify/credentials.py`](spunify/credentials.py).
 
